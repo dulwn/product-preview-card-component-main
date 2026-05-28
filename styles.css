@@ -1,0 +1,70 @@
+/* 1. Box-sizing reset (crucial for predictable sizing) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --green: hsl(158, 36%, 37%);
+    --darker-green: hsl(158, 42%, 18%);
+
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+
+    /* font styles */
+    --ff-heading: 'Fraunces', serif; 
+    --ff-description: 'Montserrat', system-ui, sans-serif;
+}
+
+.page {
+    background-color: var(--cream)
+}
+
+.card {
+    background-color: var(--white);
+    width: 375px;
+}
+
+.card_image {
+    width: 100%;
+    
+}
+
+.card__product-type {
+    font-family: var(--ff-description);
+    color: var(--grey)
+
+}
+
+.card__title {
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.card__description {
+    font-family: var(--ff-description);
+    color: var(--grey);
+}
+
+.card__price-new {
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    color: var(--green);
+}
+
+.card__price-old {
+    font-family: var(--ff-heading);
+    color: var(--grey);
+}
+
+.card__button {
+    background-color: var(--green);
+    border: None;
+    color: var(--white);
+    font-family: var(--ff-description);
+    text-align: center;
+    
+}
