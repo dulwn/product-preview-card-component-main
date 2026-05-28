@@ -14,22 +14,41 @@
     --white: hsl(0, 0%, 100%);
 
     /* font styles */
-    --ff-heading: 'Fraunces', serif; 
+    --ff-heading: 'Fraunces', serif;
     --ff-description: 'Montserrat', system-ui, sans-serif;
 }
 
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
 .page {
-    background-color: var(--cream)
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    padding: 1.5rem;
 }
 
 .card {
     background-color: var(--white);
     width: 375px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
-.card_image {
+.card__image img {
     width: 100%;
-    
+    display: block;
+    object-fit: cover;
+}
+
+.card__content {
+    padding: 1.5rem;
 }
 
 .card__product-type {
