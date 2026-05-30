@@ -19,9 +19,11 @@
 }
 
 html,
-body {
+body, 
+figure {
     margin: 0;
     min-height: 100%;
+    padding: 0;
 }
 
 .page {
@@ -30,15 +32,18 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--cream);
-    padding: 1.5rem;
+    flex-direction: column;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     width: 375px;
     max-width: 100%;
     overflow: hidden;
     border-radius: 15px;
+    font-weight: 500;
 }
 
 .card__image img {
@@ -49,12 +54,15 @@ body {
 
 .card__content {
     padding: 1.5rem;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card__product-type {
     font-family: var(--ff-description);
-    color: var(--grey)
-
+    color: var(--grey);
 }
 
 .card__title {
@@ -66,24 +74,53 @@ body {
 .card__description {
     font-family: var(--ff-description);
     color: var(--grey);
+    line-height: 1.5;
+}
+
+.card__price-group {
+    margin-bottom: 1.5rem;
 }
 
 .card__price-new {
     font-family: var(--ff-heading);
     font-weight: 700;
     color: var(--green);
+    font-size: xx-large;
+    padding-right: 1rem;
 }
 
 .card__price-old {
-    font-family: var(--ff-heading);
+    font-family: var(--ff-description);
     color: var(--grey);
+    vertical-align: text-top;
 }
 
 .card__button {
     background-color: var(--green);
-    border: None;
+    border: none;
     color: var(--white);
     font-family: var(--ff-description);
     text-align: center;
-    
+    width: 100%;
+    border-radius: 15px;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    padding: 1rem 0;
+}
+
+.card__button:hover,
+.card__button:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+@media (width >= 768px) {
+    .card {
+        flex-direction: row;
+        width: 670px;
+    }
+
+    .card__image,
+    .card__content {
+        width: 50%;
+    }
 }
